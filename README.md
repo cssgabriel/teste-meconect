@@ -1,16 +1,16 @@
-## Estrutura Banco de Dados
+## Para rodar projeto
+
+### Subindo localhost utilizando servidor embutido no PHP
+
+```
+php -S localhost:7070 -t public
+```
+
+## Banco de Dados
+
+### Schema: test
 
 - Tabela **users**
 ```sql
-CREATE TABLE users (user_id TEXT PRIMARY KEY, name TEXT, email TEXT, password TEXT, is_admin INT, created_at TEXT, updated_at TEXT);
-```
-
-- Tabela **markets**
-```sql
-CREATE TABLE markets (market_id TEXT PRIMARY KEY, name TEXT, address TEXT, owner_id TEXT, FOREIGN KEY(owner_id) REFERENCES users(user_id));
-```
-
-- Tabela **products**
-```sql
-CREATE TABLE products (product_id TEXT PRIMARY KEY, name TEXT, brand TEXT, category TEXT, price TEXT, discount TEXT, image_src TEXT, market_name TEXT, market_id TEXT NOT NULL, FOREIGN KEY(market_id) REFERENCES markets(market_id));
+CREATE TABLE `test`.`users` (`in_user` INT NOT NULL AUTO_INCREMENT , `name_user` VARCHAR(30) NOT NULL , `email_user` VARCHAR(40) NOT NULL , `password_user` VARCHAR(128) NOT NULL , `title_user` VARCHAR(74) NOT NULL , `code_user` VARCHAR(40) NOT NULL , PRIMARY KEY (`in_user`)) ENGINE = InnoDB CHARSET=utf8mb4 COLLATE utf8mb4_unicode_ci;
 ```
