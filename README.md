@@ -1,9 +1,5 @@
 ## Para rodar projeto
 
-### XAMPP
-
-Realize o download do xampp e startar o servidor e o MySQL.
-
 ### Subindo localhost utilizando servidor embutido no PHP
 
 ```
